@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bsale test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid d-flex justify-content-between">
+        <div class="navbar-brand ms-5">
+          <span class="text-center" role="button" id="logo">bsale test</span>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navItems"
+          aria-controls="navItems"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navItems">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown text-center d-xxl-none">
+              <span
+                class="nav-link dropdown-toggle pe-auto"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categorias
+              </span>
+              <div
+                class="dropdown-menu dropdown-menu-dark text-center"
+                id="dropdown-categories"
+              >
+                <template id="template-dropdowncategories">
+                  <hr class="dropdown-divider" />
+                  <button class="dropdown-item">Categoria 1</button>
+                </template>
+              </div>
+            </li>
+          </ul>
+
+          <div class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar producto"
+              aria-label="Search"
+              id="input-search"
+            />
+            <button class="btn btn-success rounded row-cols-1" id="button-search">
+              <img src="/images/search.svg" alt="cart" width="30" height="30" />
+            </button>
+          </div>
+          <button class="btn btn-outline-success row-cols-1 mx-3">
+            <img src="/images/cartdetail.svg" alt="cart" width="30" height="30" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="d-flex justify-content-start m-5">
+      <!-- sidebar -->
+      <div class="d-none" id="sidebar">
+        <div
+          class="card mt-5 text-center"
+          style="max-width: 18rem; min-width: 15rem"
+          id="template-sidebar"
+        >
+          <div class="card-header">Categorias</div>
+          <div class="list-group list-group-flush" id="sidebar-categories">
+            <template id="template-sidebarcategories">
+              <button class="list-group-item list-group-item-action" href="#"></button>
+            </template>
+          </div>
+        </div>
+      </div>
+
+      <!-- Productos -->
+      <div class="w-100">
+        <div class="text-center mb-5">
+          <h1 id="title-page"></h1>
+        </div>
+        <div
+          class="container mt-2 d-flex flex-wrap align-content-center justify-content-center gap-5 mb-5"
+          id="container-card"
+        >
+          <!-- card productos -->
+
+          <template id="template-card">
+            <div class="card shadow" style="width: 18rem; height: 34rem;">
+              <div class="" style="width:100%; height: 17rem;">
+                <img
+                src=""
+                class="card-img-top"
+                style="object-fit: contain;"
+                alt="producto"
+              />
+              </div>
+              <div class="list-group list-group-flush" style="height: 17rem;">
+                <div class="list-group-item p-5 pb-5"style="height: 12rem">
+                  <h5 class="card-title text-center">Producto</h5>
+                  <h6 class="card-subtitle text-muted text-center">Categoria</h6>
+                </div>
+                <div
+                  class="list-group-item justify-content-between d-flex align-items-center"
+                  style="height: 5rem;"
+                  >
+                  <div class="d-flex align-items-center justify-content-start">
+                    <div class="d-flex flex-column me-2">
+                      <span class="fw-bold" name="price-total"></span>
+                      <span class="text-decoration-line-through" name="price"></span>
+                    </div>
+                    <div>
+                      <span class="badge text-bg-danger" name="discount-rate"></span>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-success rounded-circle row-cols-1"
+                    style="width: 50px; height: 50px"
+                  >
+                    <img
+                      src="/images/cart.svg"
+                      alt="cart"
+                      width="30"
+                      height="30"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
