@@ -34,6 +34,7 @@ sidebarCategories.addEventListener("click", (e) => {
 
 logo.addEventListener("click", (e) => {
   dataInCard();
+  inputSearch.value = "";
   e.stopPropagation();
 });
 
@@ -142,6 +143,7 @@ const paintSidebar = (data) => {
 };
 
 const paintCard = (data) => {
+  window.scrollTo(0, 0);
   containerCard.innerHTML = "";
   titlePage.innerHTML = "";
 
@@ -186,6 +188,7 @@ const dataInCard = async () => {
 
 //funcionalidades
 const selectCategory = async (e) => {
+  inputSearch.value = "";
   const idCategory = e.target.dataset.id;
   const nameCategory = e.target.textContent;
   const datos = await getProductsCategory(idCategory);
@@ -221,8 +224,6 @@ const calculateDiscount = (price, discount) =>{
 
 //carga inicial
 window.onload = () => {
-
   dataCategories();
   dataInCard();
-  console.log('cargue!!!')
 };

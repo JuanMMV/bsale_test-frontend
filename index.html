@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid d-flex justify-content-between">
         <div class="navbar-brand ms-5">
           <span class="text-center" role="button" id="logo">bsale test</span>
@@ -53,7 +53,7 @@
             </li>
           </ul>
 
-          <div class="d-flex" role="search">
+          <div class="d-flex m-2" role="search">
             <input
               class="form-control me-2"
               type="search"
@@ -65,14 +65,16 @@
               <img src="/images/search.svg" alt="cart" width="30" height="30" />
             </button>
           </div>
-          <button class="btn btn-outline-success row-cols-1 mx-3">
-            <img src="/images/cartdetail.svg" alt="cart" width="30" height="30" />
-          </button>
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-success row-cols-1 w-auto ">
+              <img src="/images/cartdetail.svg" alt="cart" width="30" height="30" />
+            </button>
+          </div>
         </div>
       </div>
     </nav>
 
-    <section class="d-flex justify-content-start m-5">
+    <section class="d-flex justify-content-start" style="margin: 7rem 3rem;">
       <!-- sidebar -->
       <div class="d-none" id="sidebar">
         <div
