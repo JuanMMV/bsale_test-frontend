@@ -17,6 +17,8 @@ const buttonSearch = document.getElementById("button-search");
 const titlePage = document.getElementById("title-page");
 //sidebar
 const sidebar = document.getElementById("sidebar");
+//body
+const body = document.getElementById("body");
 //fragment
 const fragment = document.createDocumentFragment();
 //eventos
@@ -183,6 +185,7 @@ const dataCategories = async () => {
 const dataInCard = async () => {
   const products = await getProducts();
   paintCard(products);
+  body.setAttribute("class", "");
   titlePage.innerHTML = "Productos" + " " + products.length;
 };
 
