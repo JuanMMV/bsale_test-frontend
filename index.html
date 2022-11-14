@@ -61,20 +61,28 @@
               aria-label="Search"
               id="input-search"
             />
-            <button class="btn btn-success rounded row-cols-1" id="button-search">
+            <button
+              class="btn btn-success rounded row-cols-1"
+              id="button-search"
+            >
               <img src="/images/search.svg" alt="cart" width="30" height="30" />
             </button>
           </div>
           <div class="d-grid gap-2">
-            <button class="btn btn-outline-success row-cols-1 w-auto ">
-              <img src="/images/cartdetail.svg" alt="cart" width="30" height="30" />
+            <button class="btn btn-outline-success row-cols-1 w-auto">
+              <img
+                src="/images/cartdetail.svg"
+                alt="cart"
+                width="30"
+                height="30"
+              />
             </button>
           </div>
         </div>
       </div>
     </nav>
 
-    <section class="d-flex justify-content-start" style="margin: 7rem 3rem;">
+    <section class="d-flex justify-content-start" style="margin: 7rem 3rem">
       <!-- sidebar -->
       <div class="d-none" id="sidebar">
         <div
@@ -85,7 +93,10 @@
           <div class="card-header">Categorias</div>
           <div class="list-group list-group-flush" id="sidebar-categories">
             <template id="template-sidebarcategories">
-              <button class="list-group-item list-group-item-action" href="#"></button>
+              <button
+                class="list-group-item list-group-item-action"
+                href="#"
+              ></button>
             </template>
           </div>
         </div>
@@ -103,31 +114,39 @@
           <!-- card productos -->
 
           <template id="template-card">
-            <div class="card shadow" style="width: 18rem; height: 34rem;">
-              <div class="" style="width:100%; height: 17rem;">
+            <div class="card shadow" style="width: 18rem; height: 34rem">
+              <div class="" style="width: 100%; height: 17rem">
                 <img
-                src=""
-                class="card-img-top"
-                style="object-fit: contain;"
-                alt="producto"
-              />
+                  src=""
+                  class="card-img-top"
+                  style="object-fit: contain"
+                  alt="producto"
+                />
               </div>
-              <div class="list-group list-group-flush" style="height: 17rem;">
-                <div class="list-group-item p-5 pb-5"style="height: 12rem">
+              <div class="list-group list-group-flush" style="height: 17rem">
+                <div class="list-group-item p-5 pb-5" style="height: 12rem">
                   <h5 class="card-title text-center">Producto</h5>
-                  <h6 class="card-subtitle text-muted text-center">Categoria</h6>
+                  <h6 class="card-subtitle text-muted text-center">
+                    Categoria
+                  </h6>
                 </div>
                 <div
                   class="list-group-item justify-content-between d-flex align-items-center"
-                  style="height: 5rem;"
-                  >
+                  style="height: 5rem"
+                >
                   <div class="d-flex align-items-center justify-content-start">
                     <div class="d-flex flex-column me-2">
                       <span class="fw-bold" name="price-total"></span>
-                      <span class="text-decoration-line-through" name="price"></span>
+                      <span
+                        class="text-decoration-line-through"
+                        name="price"
+                      ></span>
                     </div>
                     <div>
-                      <span class="badge text-bg-danger" name="discount-rate"></span>
+                      <span
+                        class="badge text-bg-danger"
+                        name="discount-rate"
+                      ></span>
                     </div>
                   </div>
                   <button
